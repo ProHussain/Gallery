@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hazel.myapplication.ui.fragments.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main"/>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.hazel.myapplication.ui.fragments.viewer.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+
+    <action
+        android:id="@+id/action_mainFragment_to_detailsFragment"
+        app:destination="@id/detailsFragment" />
+    <action
+        android:id="@+id/action_mainFragment_to_pdfViewerFragment"
+        app:destination="@id/pdfViewerFragment" />
+
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.hazel.myapplication.ui.fragments.viewer.PdfViewerFragment"
+        android:label="fragment_pdf_viewer"
+        tools:layout="@layout/fragment_pdf_viewer" />
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.hazel.myapplication.ui.fragments.tabs.ImagesFragment"
+        android:label="fragment_pdf"
+        tools:layout="@layout/fragment_pdf" />
+    <fragment
+        android:id="@+id/videosFragment"
+        android:name="com.hazel.myapplication.ui.fragments.tabs.VideosFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/pdfFragment"
+        android:name="com.hazel.myapplication.ui.fragments.tabs.PdfFragment"
+        android:label="PdfFragment"
+        tools:layout="@layout/fragment_pdf">
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_saved"
+        android:id="@+id/savedFragment"
+        android:name="com.hazel.myapplication.ui.fragments.tabs.SavedFragment"
+        android:label="SavedFragment" />
+</navigation>
